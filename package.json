@@ -1,12 +1,42 @@
 {
   "name": "202205pablo",
   "version": "1.0.0",
-  "description": "",
+  "description": ">>   git config --global user.name \"Your Name",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "prepare": "husky install",
+    "lint": "eslint",
+    "types": "module",
+    "test:watch": "jest --watchAll"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.18.0",
+    "eslint": "^8.15.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "husky": "^8.0.1",
+    "jest": "^28.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PabloGlu/202205Pablo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PabloGlu/202205Pablo/issues"
+  },
+  "homepage": "https://github.com/PabloGlu/202205Pablo#readme",
+  "babel": {
+    "env": {
+      "test": {
+        "plugins": [
+          "@babel/plugin-transform-modules-commonjs"
+        ]
+      }
+    }
+  }
 }
